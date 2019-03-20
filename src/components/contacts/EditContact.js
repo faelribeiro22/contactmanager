@@ -3,7 +3,7 @@ import { Consumer } from '../../context';
 import TextInputGroup from '../layout/TextInputGroup';
 import axios from 'axios';
 
-export default class AddContact extends Component {
+export default class EditContact extends Component {
   state = {
     name: '',
     email: '',
@@ -38,16 +38,6 @@ export default class AddContact extends Component {
       });
       return;
     }
-
-    const newContact = {
-      name,
-      email,
-      phone
-    };
-
-    const res = await axios.post('https://jsonplaceholder.typicode.com/users', newContact);
-    dispatch({type: 'ADD_CONTACT', payload: res.data});
-
 
     this.setState({
       name: '',
