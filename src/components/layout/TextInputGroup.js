@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-
 const TextInputGroup = ({
   label,
   name,
@@ -10,7 +9,7 @@ const TextInputGroup = ({
   placeholder,
   type,
   onChange,
-  error,
+  error
 }) => {
   return (
     <div className="form-group">
@@ -26,21 +25,22 @@ const TextInputGroup = ({
         onChange={onChange}
       />
       {error && <div className="invalid-feedback">{error}</div>}
-  </div>
+    </div>
   );
 };
 
 TextInputGroup.propTypes = {
+  label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  error: PropTypes.string,
-}
+  onChange: PropTypes.func.isRequired,
+  error: PropTypes.string
+};
 
 TextInputGroup.defaultProps = {
-  type: 'text',
-}
+  type: 'text'
+};
 
-export default TextInputGroup
+export default TextInputGroup;
