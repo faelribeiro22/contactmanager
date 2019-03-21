@@ -6,7 +6,7 @@ import Header from './components/layout/Header';
 import About from './components/pages/About';
 import NotFound from './components/pages/NotFound';
 import AddContact from './components/contacts/AddContact';
-import Test from './components/test/test';
+import EditContact from './components/contacts/EditContact';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -23,9 +23,9 @@ class App extends Component {
               <Switch>
                 <Route exact path="/" component={Contacts} />
                 <Route exact path="/contact/add" component={AddContact} />
+                <Route exact path="/contact/edit/:id" component={EditContact} />
                 <Route exact path="/about" component={About} />
                 <Route component={NotFound} />
-                <Route exact path="/test" component={Test} />
               </Switch>
             </div>
           </div>
