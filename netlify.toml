@@ -1,4 +1,0 @@
-[build]
-base = "contactmanager/"
-publish = "contactmanager/build/"
-command = "npm run build"
