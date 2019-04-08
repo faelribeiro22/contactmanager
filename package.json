@@ -20,7 +20,7 @@
   "scripts": {
     "deploy": "sudo npm run build&&gh-pages -d build",
     "start": "react-scripts start",
-    "build": "react-scripts build && && mkdir contactmanager && cp -r build/* contactmanager/",
+    "build": "react-scripts build && mkdir contactmanager && cp -r build/* contactmanager/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
